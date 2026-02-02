@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>QR Code Generator</h1>
+
+        <form action="/generate" method="POST">
+            <input type="text" name="text" placeholder="Enter text or URL" required>
+            <button type="submit">Generate QR</button>
+        </form>
+
+        <% if (qrCode) { %>
+            <div class="qr">
+                <img src="<%= qrCode %>" alt="QR Code">
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>
